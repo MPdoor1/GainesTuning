@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #1c2b23;
+    color: #fff;
+    overflow-x: hidden;
+    font-size: 18px; /* Set a base font-size for your site */
+}
+
+header {
+    background-image: url('images/pianoStrings3.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: fixed; /* Change this from 'absolute' to 'fixed' */
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.0); /* Adding a background to the nav */
+}
+.logo {
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 2em; /* increased font-size */
+    font-weight: 400;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3em; /* increased font-size */
+}
+
+.header-content {
+    text-align: center;
+    padding: 0 10%;
+    color: #fff;
+}
+
+.header-content h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 5em;
+    font-weight: 200;
+}
+
+.header-content p {
+    margin: 20px 0;
+    font-size: 1.8em; /* increased font-size */
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10%;
+}
+
+.service {
+    width: 40%;
+}
+
+.service-content {
+    display: flex;
+    align-items: start; 
+    height: auto;
+    width: 50vw;
+    max-width:800px;
+}
+
+.service-image {
+    margin-right: 20px; /* Adds some spacing between the image and the text */
+}
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.2em; /* increased font-size */
+}
+.logo {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color: #fff;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 10px;
+    border:none;
+    border-radius: 25px;
+}
+
+.logo:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#contactButton {
+    margin: 50px;
+    color:#D4AF37;
+}
+
+/* Add this CSS to make the about me image circular */
+.service img {
+    border-radius: 50%;
+    width: 300px; /* Adjust the size as needed */
+    height: 300px; /* Keep width and height equal for a perfect circle */
+    object-fit: cover;
+    margin: 50px;
+  }
+  
+  .navbar-scroll {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    transition: background-color 0.5s ease;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 48rem) { /* 768px is roughly 48rem */
+    .nav-links li a {
+        font-size: 1em; /* reduce font size on smaller screens */
+    }
+
+    .service-content {
+        flex-direction: column; /* stack items vertically on smaller screens */
+    }
+
+    .service-image {
+        margin-right: 0; /* remove right margin on smaller screens */
+        margin-bottom: 20px; /* add some spacing between the image and the text below */
+    }
+
+    .services {
+        padding: 3.125rem 0.3125rem;
+    }
+
+    .service {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 48rem) { /* 768px is roughly 48rem */
+    nav {
+        flex-wrap: wrap; /* This will make items wrap onto the next line */
+        align-items: center; /* Center items vertically */
+        padding: 0.625rem;
+    }
+
+    .logo {
+        flex: 100%; /* This will make the logo take a full line */
+        text-align: center; /* Center the logo */
+    }
+
+    .nav-links {
+        padding-top: 1.25rem;
+        justify-content: center; /* Center nav items horizontally */
+        flex-wrap: wrap; /* This allows the nav items to wrap to the next line */
+    }
+
+    .nav-links li {
+        padding: 0.3125rem; /* reduce padding on smaller screens */
+    }
+
+    .nav-links li a {
+        font-size: 0.9em; /* reduce font size on smallest screens */
+    }
+
+    .header-content h1 {
+        font-size: 2.5rem; /* reduce font size on smallest screens */
+    }
+
+    .header-content p {
+        font-size: 1.4rem; /* reduce font size on smallest screens */
+    }
+
+    .header-content h1 {
+        font-size: 3.75rem;
+    }
+
+    .header-content p {
+        font-size: 2.1875rem;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 100%;
+    }
+}

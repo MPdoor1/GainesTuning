@@ -16,7 +16,7 @@ header {
     background-image: url('images/pianoStrings3.jpeg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 90%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +27,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
-    position: fixed; /* Change this from 'absolute' to 'fixed' */
+    /* position: fixed; Change this from 'absolute' to 'fixed' */
     top: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.0); /* Adding a background to the nav */
@@ -60,6 +60,7 @@ nav {
     text-align: center;
     padding: 0 10%;
     color: #fff;
+    padding-top: 200px;
 }
 
 .header-content h1 {
@@ -169,23 +170,31 @@ footer {
 }
 
 @media screen and (max-width: 48rem) { /* 768px is roughly 48rem */
+   
     nav {
-        flex-wrap: wrap; /* This will make items wrap onto the next line */
-        align-items: center; /* Center items vertically */
-        padding: 0.625rem;
+        flex-direction: column; /* Stack items vertically */
+    }
+    .header-content{
+        padding-top: 100px;
+    }
+    /* Assuming your contact button has the id 'contactButton' */
+    #contactButton {
+        order: 1; /* Place first */
+        align-self: center; /* Center the button */
+        margin-top: 0.625rem; /* Adjust as needed */
     }
 
     .logo {
-        flex: 100%; /* This will make the logo take a full line */
-        text-align: center; /* Center the logo */
+        order: 2; /* Place second */
+        margin-bottom: 0.625rem; /* Adjust as needed */
     }
 
     .nav-links {
-        padding-top: 1.25rem;
-        justify-content: center; /* Center nav items horizontally */
-        flex-wrap: wrap; /* This allows the nav items to wrap to the next line */
+        order: 3; /* Place last */
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+        padding: 0; /* remove padding */
     }
-
     .nav-links li {
         padding: 0.3125rem; /* reduce padding on smaller screens */
     }

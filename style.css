@@ -94,6 +94,7 @@ nav {
 .service-image {
     margin-right: 20px; /* Adds some spacing between the image and the text */
 }
+
 footer {
     background: #1a1a1a;
     color: #fff;
@@ -101,6 +102,7 @@ footer {
     padding: 20px 0;
     font-size: 1.2em; /* increased font-size */
 }
+
 .logo {
     display: inline-block;
     font-family: 'Raleway', sans-serif;

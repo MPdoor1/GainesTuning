@@ -137,6 +137,8 @@ footer {
     border-radius: 50%;
     width: 300px; /* Adjust the size as needed */
     height: 300px; /* Keep width and height equal for a perfect circle */
+    min-width: 150px;
+    min-height: 150px;
     object-fit: cover;
     margin: 50px;
   }
@@ -144,30 +146,6 @@ footer {
   .navbar-scroll {
     background-color: rgba(0, 0, 0, 0.7) !important;
     transition: background-color 0.5s ease;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 48rem) { /* 768px is roughly 48rem */
-    .nav-links li a {
-        font-size: 1em; /* reduce font size on smaller screens */
-    }
-
-    .service-content {
-        flex-direction: column; /* stack items vertically on smaller screens */
-    }
-
-    .service-image {
-        margin-right: 0; /* remove right margin on smaller screens */
-        margin-bottom: 20px; /* add some spacing between the image and the text below */
-    }
-
-    .services {
-        padding: 3.125rem 0.3125rem;
-    }
-
-    .service {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 48rem) { /* 768px is roughly 48rem */
@@ -205,27 +183,35 @@ footer {
     }
 
     .header-content h1 {
-        font-size: 2.5rem; /* reduce font size on smallest screens */
+        font-size: 2.0rem; /* reduce font size on smallest screens */
     }
 
     .header-content p {
-        font-size: 1.4rem; /* reduce font size on smallest screens */
+        font-size: 1.2rem; /* reduce font size on smallest screens */
     }
 
     .header-content h1 {
         font-size: 3.75rem;
     }
 
-    .header-content p {
-        font-size: 2.1875rem;
-    }
 
     .services {
         flex-direction: column;
         align-items: center;
+        padding: 3.125rem 0.3125rem;
     }
 
     .service {
         width: 100%;
+    } 
+
+
+    .service-content {
+        flex-direction: column; /* stack items vertically on smaller screens */
+    }
+
+    .service-image {
+        margin-right: 0; /* remove right margin on smaller screens */
+        margin-bottom: 20px; /* add some spacing between the image and the text below */
     }
 }

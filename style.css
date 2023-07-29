@@ -7,33 +7,26 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     font-family: 'Raleway', sans-serif;
     background: #1c2b23;
     color: #fff;
-    overflow-x: hidden;
     font-size: 18px;
 }
 
 header {
-    position: relative;
     background-image: url('images/pianoStrings3.jpeg');
     background-size: cover;
     background-position: center;
-    min-height: 100vh; 
     padding: 80px 0;
-    display: flex; /* Add this line */
-    flex-direction: column; /* Add this line */
-    justify-content: space-between; /* Add this line if you want to distribute space evenly between elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 nav {
-    position: absolute; /* Added this line */
-    top: 0; /* Added this line */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 0 10%;
     background: rgba(0, 0, 0, 0.0);
 }
@@ -66,7 +59,6 @@ nav {
     text-align: center;
     padding: 0 10%;
     color: #fff;
-    padding-top: 20vh; /* Change this line */
 }
 
 .header-content h1 {
@@ -82,6 +74,7 @@ nav {
 
 .services {
     display: flex;
+    flex-wrap: wrap; /* New Property */
     justify-content: space-around;
     padding: 50px 10%;
 }
@@ -91,7 +84,8 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    flex: 1 1 200px; /* New Property */
+    margin: 10px; /* New Property */
 }
 
 .service-content {
@@ -111,10 +105,6 @@ nav {
 }
 
 footer {
-    position: relative; /* Add this line */
-    left: 0; /* Add this line */
-    bottom: 0; /* Add this line */
-    width: 100%; /* Add this line */
     background: #1a1a1a;
     color: #fff;
     text-align: center;
@@ -170,32 +160,29 @@ footer {
 .bufferDiv {
     height:0px;
 }
+
 @media screen and (max-width: 768px) {
+    header {
+        padding: 40px 0; /* Adjust padding */
+    }
+
     nav {
         flex-direction: column;
+        padding: 10px 0; /* Adjust padding */
     }
 
     .header-content {
-        padding-top: 100px;
-    }
-    .bufferDiv {
-        height:50px;
-    }
-    #contactButton {
-        order: 1;
-        align-self: center;
-        margin-top: 20px;
+        padding-top: 20px; /* Adjust padding */
     }
 
     .logo {
-        order: 2;
-        margin-bottom: 20px;
+        font-size: 1.5em; /* Adjust font size */
+        margin: 5px; /* Adjust margin */
     }
 
     .nav-links {
-        width: 100%; /* Added this line */
-        align-items: center; /* Added this line */
-        justify-content: center; /* Added this line */
+        flex-direction: column;
+        align-items: center;
         padding: 0;
     }
 
@@ -217,20 +204,15 @@ footer {
 
     .services {
         flex-direction: column;
-        align-items: center;
         padding: 30px 10%;
     }
 
     .service {
-        width: 80%;
+        margin-bottom: 20px; /* Add margin */
     }
 
-    .service-content {
-        flex-direction: column;
-    }
-
-    .service-image {
-        margin-right: 0;
-        margin-bottom: 20px;
+    .img-container {
+        width: 150px; /* Adjust size */
+        height: 150px; /* Adjust size */
     }
 }

@@ -193,9 +193,9 @@ footer {
     }
 
     .nav-links {
-        order: 3;
-        align-items: center;
-        justify-content: center;
+        width: 100%; /* Added this line */
+        align-items: center; /* Added this line */
+        justify-content: center; /* Added this line */
         padding: 0;
     }
 
